@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "input-components": {
+      "projectType": "library",
+      "root": "projects/input-components",
+      "sourceRoot": "projects/input-components/src",
+      "prefix": "kobo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/input-components/tsconfig.lib.json",
+            "project": "projects/input-components/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/input-components/src/test.ts",
+            "tsConfig": "projects/input-components/tsconfig.spec.json",
+            "karmaConfig": "projects/input-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/input-components/tsconfig.lib.json",
+              "projects/input-components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "common-components"
 }

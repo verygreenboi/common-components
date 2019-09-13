@@ -1,0 +1,7 @@
+<ng-content select="label"></ng-content>
+<div class="input-wrap">
+  <mat-icon *ngIf="icon" class="material-icons icon">{{icon}}</mat-icon>
+  <ng-content></ng-content>
+</div>
+<ng-content *ngIf="!hasError" select=".hint"></ng-content>
+<ng-content select=".error"></ng-content>

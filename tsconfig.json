@@ -17,7 +17,18 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@codehaven/input-components": [
+        "dist/input-components"
+      ],
+      "@codehaven/input-components/*": [
+        "dist/input-components/*"
+      ],
+      "@angular/*": [
+        "./node_modules/@angular/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

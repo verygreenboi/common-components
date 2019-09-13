@@ -1,0 +1,52 @@
+$primary: #4D90FE;
+$shadow: 0 0 0 30px white inset !important;
+$focus-shadow: 0 0 5px $primary;
+$error-focus-shadow: 0 0 5px red !important;
+
+:host {
+  font-family: 'Poppins', sans-serif;
+  .input-wrap {
+    border-color: lightgray;
+    background: white;
+
+    &::ng-deep {
+      .error {
+        color: red;
+      }
+      input {
+        background-color: #FFFFFF !important;
+        &:-webkit-autofill {
+          -webkit-box-shadow: $shadow;
+          &:hover, &:focus, &:active {
+            -webkit-box-shadow: $shadow;
+          }
+        }
+      }
+    }
+  }
+}
+
+:host(.input-focus) {
+  &::ng-deep label {
+    color: $primary;
+  }
+  .input-wrap {
+    border: 1px solid $primary;
+    -webkit-box-shadow: $focus-shadow;
+    box-shadow: $focus-shadow;
+  }
+}
+
+:host(.withError) {
+  color: red;
+  &::ng-deep {
+    label, .error {
+      color: red !important;
+    }
+  }
+  .input-wrap {
+    border: 1px solid red !important;
+    -webkit-box-shadow: $error-focus-shadow;
+    box-shadow: $error-focus-shadow;
+  }
+}
