@@ -1,12 +1,14 @@
-#Kobo Inputs
+# Kobo Inputs
+
 [![Actions Status](https://github.com/verygreenboi/common-components/workflows/Build%20Common%20Components%20Library/badge.svg)](https://github.com/verygreenboi/common-components/actions)
 
 This library abstracts some of the most repetitive chores while building form elements.
 
-###Demo
+### Demo
+
 [See demo](https://stackblitz.com/edit/angular-qjw4sx)
 
-###Installation
+### Installation
 ```npm install @codehaven/kobo-inputs --save```
 
 This library uses Angular Material Components so be sure to [install](https://material.angular.io/guide/getting-started) that before use. If you want to display icons in your form fields, you have to include the material icons css (typically in your index.html file).
@@ -15,7 +17,8 @@ This library uses Angular Material Components so be sure to [install](https://ma
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 ```
  
- ##Use
+ ## Use
+ 
  ```
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
