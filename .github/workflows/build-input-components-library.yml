@@ -1,6 +1,6 @@
 name: Build Common Components Library
 
-on: 
+on:
   push:
     branches:
     - master
@@ -20,10 +20,11 @@ jobs:
       run: |
         cd projects/input-components
         npm version patch
+    - name: Install Yarn
+      uses: borales/actions-yarn@master
     - name: npm install, build, and test
       run: |
-        npm install
-        ng b input-components
-        ng test input-component
+        npx ng b input-components
+        npx ng test input-component
       env:
         CI: true
