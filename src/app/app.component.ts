@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { hasRequiredField } from '@codehaven/input-components';
 
@@ -10,9 +10,7 @@ import { hasRequiredField } from '@codehaven/input-components';
 export class AppComponent {
   title = 'common-components';
   testForm: FormGroup;
-
-  @ViewChild('phone', {static: false})
-  phoneRef: ElementRef;
+  defaultCountry = 'ng';
 
   get phoneControl(): FormControl {
     return this.testForm.controls.phone as FormControl;
@@ -20,8 +18,10 @@ export class AppComponent {
 
   constructor(fb: FormBuilder) {
     this.testForm = fb.group({
-      phone: ['234']
+      phone: ['234', Validators.required]
     });
+
+    this.phoneControl.valueChanges.subscribe((val) => console.log(val));
   }
 
   isRequired(control): boolean {

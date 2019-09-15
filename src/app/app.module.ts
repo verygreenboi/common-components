@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { KoboInputModule } from '@codehaven/input-components';
+import { KoboPhoneNumberModule } from '@codehaven/input-components';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    KoboInputModule
+    KoboPhoneNumberModule
   ],
   providers: [],
   bootstrap: [AppComponent]

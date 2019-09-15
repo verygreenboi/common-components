@@ -1,6 +1,6 @@
 <kobo-input [formGroup]="testForm" direction="reverse" icon="waves">
   <label for="phone">Phone <span *ngIf="isRequired(phoneControl)">*</span></label>
-  <input #phone formControlName="phone" id="phone" type="text" placeholder="eg. me@gmail.com" koboMask mask="(999) 9999 - 999">
+  <input #phone id="phone" type="text" placeholder="eg. me@gmail.com" koboMask mask="(999) 9999 - 999">
   <span class="hint" koboHint>Only valid phone number</span>
   <span *ngIf="phoneControl.invalid && phoneControl.touched" class="error" koboHint>Email is not valid</span>
 </kobo-input>
@@ -11,5 +11,11 @@
   <span class="hint" koboHint>Only valid phone number</span>
   <span *ngIf="phoneControl.invalid && phoneControl.touched" class="error" koboHint>Email is not valid</span>
 </kobo-input>
+
+<kobo-phone-number [mask]="'(9999) 999 9999'" [country]="defaultCountry"></kobo-phone-number>
+<kobo-phone-number [formControl]="phoneControl"
+                   hint="Only valid phone number"
+                   [mask]="'(9999) 999 9999'" [country]="defaultCountry"></kobo-phone-number>
+
 <router-outlet></router-outlet>
 
