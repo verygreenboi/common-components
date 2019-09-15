@@ -1,4 +1,5 @@
 #Kobo Inputs
+[![Actions Status](https://github.com/verygreenboi/common-components/workflows/Build%20Common%20Components%20Library/badge.svg)](https://github.com/verygreenboi/common-components/actions)
 
 This library abstracts some of the most repetitive chores while building form elements.
 

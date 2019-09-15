@@ -16,12 +16,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - name: bump library version
-      run: |
-        cd projects/input-components
-        npm version patch
-        cd ../../
-        ls -l
+#    - name: bump library version
+#      run: |
+#        cd projects/input-components
+#        npm version patch
+#        cd ../../
+#        ls -l
     - name: Install Yarn
       uses: borales/actions-yarn@master
     - name: npm install, build, and test
