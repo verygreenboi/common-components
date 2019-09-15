@@ -9,3 +9,5 @@ export * from './lib/common/input-ref-directive';
 export * from './lib/common/hint-ref-directive';
 export * from './lib/common/hasRequired';
 export * from './lib/common/mask-directive';
+export * from './lib/phone-number/phone-number-input.module';
+export * from './lib/phone-number/phone-number.component';

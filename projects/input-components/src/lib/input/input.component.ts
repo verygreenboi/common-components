@@ -2,7 +2,7 @@ import {
   AfterContentInit,
   Component,
   ContentChild,
-  ContentChildren,
+  ContentChildren, ElementRef,
   HostBinding,
   Input, OnChanges,
   QueryList
@@ -32,7 +32,7 @@ export class InputComponent implements AfterContentInit, OnChanges {
 
   hasError = false;
 
-  constructor() {
+  constructor(public elementRef: ElementRef) {
   }
 
   ngAfterContentInit(): void {

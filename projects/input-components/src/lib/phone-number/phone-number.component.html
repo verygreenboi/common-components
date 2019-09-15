@@ -1,1 +1,30 @@
-<p>phone-number works!</p>
+<kobo-input [direction]="direction" [icon]="icon" #input>
+  <label>Phone</label>
+  <div class="flag flag-icon flag-icon-{{country}}"  koboFlag [optionsRef]="dropdownRef" [inputRef]="input" [id]="countrySelectorId"></div>
+  <input koboMask mask="{{mask}}" (keyup)="keyUp($event)" type="text" #phone>
+  <span *ngIf="hint" class="hint" koboHint>{{hint}}</span>
+  <span *ngIf="value && hasError" class="error" koboHint>Phone number is not valid</span>
+</kobo-input>
+
+
+
+<ng-template #dropdownRef>
+  <div class="options">
+    <div matRipple class="option" (click)="onClick('ng', phone.value)">
+      <div class="flag flag-icon flag-icon-ng"></div>
+      <div class="country">Nigeria</div>
+    </div>
+    <div matRipple class="option" (click)="onClick('za', phone.value)">
+      <div class="flag flag-icon flag-icon-za"></div>
+      <div class="country">South Africa</div>
+    </div>
+    <div matRipple class="option" (click)="onClick('tg', phone.value)">
+      <div class="flag flag-icon flag-icon-tg"></div>
+      <div class="country">Togo</div>
+    </div>
+    <div matRipple class="option" (click)="onClick('gh', phone.value)">
+      <div class="flag flag-icon flag-icon-gh"></div>
+      <div class="country">Ghana</div>
+    </div>
+  </div>
+</ng-template>

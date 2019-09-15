@@ -1,0 +1,32 @@
+$border-color: #d3d3d3;
+.flag {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+::ng-deep {
+  box-sizing: border-box;
+  .options {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    background: #ffffff;
+    border-radius: 5px;
+    z-index: 1000;
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .option {
+      display: flex;
+      padding: 20px;
+      cursor: pointer;
+      .country {
+        color: #000 !important;
+      }
+    }
+
+    .option:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
