@@ -26,7 +26,8 @@ jobs:
       uses: borales/actions-yarn@master
     - name: npm install, build, and test
       run: |
-        npx ng b input-components
-        npx ng test input-component
+        npm i -g @angular/cli
+        ng b input-components
+        ng test input-component
       env:
         CI: true
