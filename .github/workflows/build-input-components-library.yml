@@ -29,6 +29,6 @@ jobs:
         yarn install
         npm i -g @angular/cli
         ng b input-components
-        ng test input-components
+        npm run test-headless
       env:
         CI: true
