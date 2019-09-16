@@ -13,8 +13,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - name: Install Yarn
+        uses: borales/actions-yarn@master
       - name: Publish to npm
         run: |
+          yarn install
+          npm i -g @angular/cli
+          ng b input-components
           ls -l
           cd dist/input-components
           npm version patch
