@@ -9,20 +9,18 @@ jobs:
   update_draft_release:
     runs-on: ubuntu-latest
     steps:
-      - name:  Github Create Release
-        uses: frankjuniorr/github-create-release-action@v2.1.1
-#       - uses: actions/checkout@v1
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: 12.x
-#       - name: Publish to npm
-#         run:
-#           ls -l
-#           cd dist/input-components
-#           npm version patch
-#           npm publish --access public
-#         env:
-#           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-          
-          
-      
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Publish to npm
+        run:
+          ls -l
+          cd dist/input-components
+          npm version patch
+          npm publish --access public
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+
+
