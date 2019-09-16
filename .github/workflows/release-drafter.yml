@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 12.x
       - name: Publish to npm
-        run:
+        run: |
           ls -l
           cd dist/input-components
           npm version patch
